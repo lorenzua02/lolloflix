@@ -4,7 +4,7 @@ import requests
 def singup(acc_data: dict) -> None:
     registration_endpoint = "http://127.0.0.1:8000/auth/users/"
     response = requests.post(registration_endpoint, data=acc_data)
-    print(response)
+    print(response, response.text)
 
 
 def login(login_cred: dict) -> str:
