@@ -22,6 +22,10 @@ class FilmSerializer(serializers.ModelSerializer):
             linked_review = Review.objects.filter(film=instance, review_author=logged_user)
             representation['seen'] = linked_review.exists()
 
+        if len(representation['reviews']) != 0:
+            reviews = [x['vote'] for x in representation['reviews']]  # TODO not djangotonic way :/
+            representation['avg_vote'] = sum(reviews) / len(reviews)
+
         return representation
 
     class Meta:
