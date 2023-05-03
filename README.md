@@ -4,6 +4,7 @@ git clone https://github.com/lorenzua02/lolloflix
 cd lolloflix
 docker compose up --build -d
 
+docker ps
 docker exec -it container_id python manage.py migrate
 ```
 
