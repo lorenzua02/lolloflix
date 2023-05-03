@@ -1,4 +1,7 @@
-### Run the server
+# Lolloflix
+> A simple film & review backend system in Django
+
+# 🚀 Get started
 ```
 git clone https://github.com/lorenzua02/lolloflix
 cd lolloflix
@@ -8,11 +11,17 @@ docker ps
 docker exec -it container_id python manage.py migrate
 ```
 
-Api docs available at http://127.0.0.1:8000/docs/
+# 📚 Features
+- User login / singup
+- Add film(s)
+- Review films
+- Filter fiilms by platform
+- Films average rating
+- Have I seen this film before?
 
-#### Admin page
-URL: http://127.0.0.1:8000/admin/
+# ℹ️ Information
+Api docs: http://127.0.0.1:8000/docs/
 
-create superuser running
-`docker exec -it container_id python manage.py createsuperuser`
+Admin page: http://127.0.0.1:8000/admin/
 
+(create superuser running `docker exec -it container_id python manage.py createsuperuser`)
