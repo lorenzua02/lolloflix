@@ -19,7 +19,7 @@ class FilmSerializer(serializers.ModelSerializer):
         representation = super().to_representation(instance)
         logged_user = self.context['request'].user
         if not logged_user.is_anonymous:
-            linked_review = Review.objects.filter(film=instance, review_author=self.context['request'].user)
+            linked_review = Review.objects.filter(film=instance, review_author=logged_user)
             representation['seen'] = linked_review.exists()
 
         return representation
